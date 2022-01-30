@@ -1,0 +1,200 @@
+:root {
+    --text-s: 14px;
+    --text-m: 20px;
+    --text-l: 32px;
+
+    --total-width: 100%;
+    --margin: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--text-s);
+    font-family: 'Poppins', sans-serif;
+    color: #202020;
+    height: 120vh;
+}
+
+.container {
+    margin: 0 var(--margin);
+    max-width: var(--total-width);
+    box-sizing: border-box;
+}
+
+header {
+    border-bottom: 1px solid gray;
+    height: 63px;
+    padding: 16px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: height .3s ease;
+    position: fixed;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+}
+
+header.open {
+    height: 306px;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header > .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: var(--text-m);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#nav-toggler {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.btn {
+    border: none;
+    border-radius: 25px;
+    font-weight: 500;
+    background-color: #202020;
+    color: #fff;
+    padding: 12px 18px;
+    transition: color .15s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: turquoise;
+}
+
+.get-quote {
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+}
+
+nav.desktop {
+    display: none;
+}
+
+nav.desktop ul {
+    display: flex;
+}
+
+nav.desktop li {
+    margin-right: 3rem;
+}
+
+nav.desktop li {
+    border-color: transparent;
+    transition: border-color .3s ease;
+}
+
+nav.desktop a.selected li, nav.desktop li:hover {
+    border-bottom: 1px solid #202020;
+}
+
+nav.mobile {
+    width: 100%;
+    background-color: #202020;
+    margin-top: 16px;
+    color: #fff;
+}
+
+nav.mobile a.selected li {
+    color: turquoise;
+}
+
+nav.mobile ul {
+    padding: 12px 24px;
+}
+
+nav.mobile li {
+    padding: 16px 0;
+}
+
+nav.mobile li:not(:last-child) {
+    border-bottom: 1px solid #fff;
+}
+
+@media only screen and (min-width: 360px) {
+    header {
+        height: 75px;
+    }
+
+    header.open {
+        height: 328px;
+    }
+
+    .get-quote {
+        display: block;
+    }
+
+    nav.mobile {
+        margin-top: 24px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    :root {
+        --total-width: 540px;
+        --margin: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        --total-width: 720px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    :root {
+        --text-s: 16px;
+        --text-m: 24px;
+        --text-l: 36px;
+
+        --total-width: 960px;
+    }
+
+    header .container {
+        justify-content: unset;
+    }
+
+    .logo {
+        flex-grow: 1;
+    }
+
+    #nav-toggler {
+        display: none;
+    }
+
+    nav.desktop {
+        display: initial;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        --total-width: 1140px;
+    }
+} 
