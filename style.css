@@ -67,18 +67,20 @@ header > .container {
 }
 
 .btn {
-    border: none;
+    border: 1px solid transparent;
     border-radius: 25px;
     font-weight: 500;
     background-color: #202020;
     color: #fff;
     padding: 12px 18px;
-    transition: color .15s ease;
+    transition: all .3s ease;
     cursor: pointer;
 }
 
 .btn:hover {
-    color: turquoise;
+    border: 1px solid #202020;
+    background-color: transparent;
+    color: #202020;
 }
 
 .get-quote {
@@ -135,6 +137,62 @@ nav.mobile li:not(:last-child) {
     border-bottom: 1px solid #fff;
 }
 
+#home {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #202020;
+}
+
+#home .container {
+    text-align: center;
+    max-width: 400px;
+}
+
+.greet {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.name {
+    background-color: #202020;
+    color: #fff;
+    padding: 0 .5rem;
+}
+
+.rol {
+    font-size: var(--text-l);
+}
+
+.presentation {
+    font-size: var(--text-s);
+    margin: 0 0 2rem 0;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.experience {
+    text-decoration: none;
+}
+
+.secondary {
+    border: 1px solid #202020;
+    background-color: transparent;
+    color: #202020;
+}
+
+.secondary:hover {
+    background-color: #202020;
+    color: #fff;
+}
+
 @media only screen and (min-width: 360px) {
     header {
         height: 75px;
@@ -189,6 +247,10 @@ nav.mobile li:not(:last-child) {
 
     nav.desktop {
         display: initial;
+    }
+
+    #home .container {
+        max-width: 500px;
     }
 
 }
