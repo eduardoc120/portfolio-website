@@ -1,16 +1,25 @@
 // Mobile navigation
 const navToggler = document.getElementById("nav-toggler");
 const nav = document.getElementById("mobile-nav");
+const mobileNavItems = Array.from(document.getElementsByClassName("mobile-nav-item"));
 const header = document.getElementById("header");
 let animation = false;
 
-navToggler.addEventListener("click", () => {
+function onNavTogglerClick(e) {
     if (animation) return;
     animation = true;
     header.classList.toggle("open");
     setTimeout(() => {
         animation = false;
     }, 300);
+};
+
+navToggler.addEventListener("click", onNavTogglerClick);
+
+mobileNavItems.forEach(mobileNavItem => {
+    mobileNavItem.addEventListener("click", (e) => {
+        onNavTogglerClick();
+    });
 });
 
 // Desktop navigation
