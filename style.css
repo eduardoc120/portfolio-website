@@ -403,6 +403,19 @@ form {
     margin: 0;
 }
 
+footer {
+    background-color: #202020;
+    color: #fff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: var(--text-m);
+}
+
 @media only screen and (min-width: 360px) {
     header {
         height: 75px;
