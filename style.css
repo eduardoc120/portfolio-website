@@ -4,6 +4,7 @@
     --text-l: 32px;
 
     --total-width: 100%;
+    --section-width: 400px;
     --margin: 16px;
 }
 
@@ -15,7 +16,6 @@ body {
     font-size: var(--text-s);
     font-family: 'Poppins', sans-serif;
     color: #202020;
-    height: 120vh;
 }
 
 .container {
@@ -148,7 +148,7 @@ nav.mobile li:not(:last-child) {
 
 #home .container {
     text-align: center;
-    max-width: 400px;
+    max-width: var(--section-width);
 }
 
 .greet {
@@ -193,6 +193,51 @@ nav.mobile li:not(:last-child) {
     color: #fff;
 }
 
+#about {
+    padding: 175px 0;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #202020;
+}
+
+#about .container {
+    max-width: var(--section-width);
+}
+
+.about-title {
+    margin-top: 0;
+    font-size: var(--text-l);
+}
+
+.who-Im {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 24px 0;
+}
+
+.my-data {
+    display: grid;
+    gap: 24px;
+}
+
+.my-data-key {
+    font-size: var(--text-s);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.my-data-value.email {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 360px) {
     header {
         height: 75px;
@@ -216,6 +261,22 @@ nav.mobile li:not(:last-child) {
         --total-width: 540px;
         --margin: auto;
     }
+
+    #about {
+        display: block;
+    }
+
+    #about .container {
+        max-width: var(--total-width);
+        margin: 0 auto;
+    }
+
+    .my-data {
+        grid-template-columns: auto 1fr;
+        column-gap: 96px;
+        row-gap: 36px;
+    }
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -231,6 +292,7 @@ nav.mobile li:not(:last-child) {
         --text-l: 36px;
 
         --total-width: 960px;
+        --section-width: 500px;
     }
 
     header .container {
@@ -247,10 +309,6 @@ nav.mobile li:not(:last-child) {
 
     nav.desktop {
         display: initial;
-    }
-
-    #home .container {
-        max-width: 500px;
     }
 
 }
