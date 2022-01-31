@@ -332,6 +332,77 @@ p {
     margin: 0;
 }
 
+#quote {
+    padding: 150px 0;
+    border-bottom: 1px solid #202020;
+}
+
+#quote .container {
+    text-align: center;
+}
+
+.quote-title {
+    font-size: var(--text-l);
+    margin: 0;
+}
+
+.quote-description {
+    margin: 2rem 0 5rem 0;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 24px;
+    border: 1px solid #202020;
+    box-sizing: border-box;
+}
+
+.form-description {
+    margin: 2rem 0;
+}
+
+.inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 4rem;
+}
+
+.quote-input-text, .quote-textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #DADADA;
+    box-sizing: border-box;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 6rem;
+}
+
+.contact-info > div {
+    width: 250px;
+}
+
+.contact-icon {
+    font-size: 48px;
+}
+
+.contact-cta {
+    font-size: var(--text-m);
+}
+
+.contact-data {
+    margin: 0;
+}
+
 @media only screen and (min-width: 360px) {
     header {
         height: 75px;
@@ -370,6 +441,10 @@ p {
         column-gap: 96px;
         row-gap: 36px;
     }
+
+    form {
+        padding: 75px 50px;
+    }
     
 }
 
@@ -377,6 +452,15 @@ p {
     :root {
         --total-width: 720px;
     }
+
+    .inputs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quote-textarea-container {
+        grid-column: span 2;
+    }
+
 }
 
 @media only screen and (min-width: 1024px) {
