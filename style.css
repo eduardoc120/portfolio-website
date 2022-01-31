@@ -237,7 +237,7 @@ hr {
 }
 
 #experience {
-    padding: 75px 0;
+    padding: 150px 0;
     border-bottom: 1px solid #202020;
 }
 
@@ -284,6 +284,51 @@ p {
 }
 
 .company-stay {
+    margin: 0;
+}
+
+#skills {
+    padding: 150px 0;
+    border-bottom: 1px solid #202020;
+}
+
+#skills .container {
+    text-align: center;
+}
+
+.skills-title {
+    font-size: var(--text-l);
+    line-height: 1rem;
+    margin: 0;
+}
+
+.skills-description {
+    margin: 2rem 0 4rem 0;
+}
+
+.skills-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-card {
+    border: 1px solid #202020;
+    width: 100%;
+    max-width: 300px;
+    padding: 2rem 1.5rem;
+}
+
+.skill-logo {
+    font-size: 48px;
+}
+
+.skill-name {
+    font-size: var(--text-m);
+}
+
+.skill-description {
     margin: 0;
 }
 
