@@ -194,11 +194,9 @@ nav.mobile li:not(:last-child) {
 }
 
 #about {
-    padding: 175px 0;
-    max-height: 100vh;
+    padding: 150px 0;
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
     border-bottom: 1px solid #202020;
 }
 
@@ -236,6 +234,57 @@ hr {
 .my-data-value.email {
     font-weight: bold;
     text-decoration: underline;
+}
+
+#experience {
+    padding: 75px 0;
+    border-bottom: 1px solid #202020;
+}
+
+#experience .container {
+    text-align: center;
+}
+
+.experience-years {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+}
+
+.experience-title {
+    font-size: var(--text-l);
+}
+
+p {
+    line-height: 1.85rem;
+}
+
+.companies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.companies > div {
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #202020;
+    padding: 25px 0;
+}
+
+.company-logo {
+    font-size: 48px;
+}
+
+.company-name {
+    font-size: var(--text-m);
+}
+
+.company-stay {
+    margin: 0;
 }
 
 @media only screen and (min-width: 360px) {
